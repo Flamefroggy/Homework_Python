@@ -1,7 +1,8 @@
-def sum(number):
-    digit = filter(lambda x: x.isdigit(), str(number))
-    return sum(map(int, list(digit)))
+number = input('Введите любое вещественное число: ')
 
-number = input("Введите вещественное число: ")
+list_num = list(map(int, (i for i in number if i.isdigit())))
 
-print(f"Сумма цифр в числе: {sum(number)}")
+sum_digit = sum(list_num)
+
+print(f'Исходное число: {number}')
+print(f'Сумма его чисел = {sum_digit}')
