@@ -2,9 +2,10 @@
 # Задайте последовательность чисел. 
 # Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 
-list1 = [2, 4, 5, 5, 5, 6, 42, 31, 42, 1, 3, 2, 6, 5]
-list2 = []
-for i in list1:
-    if i not in list2: 
-        list2.append(i)
-print(list2)
+spisok = [int(i) for i in input("Введите числа через пробел: ").split()]
+result = []
+for i in spisok:
+    if spisok.count(i) == 1:
+        result.append(i)
+print("Данные числа встречаются всего один раз: ")
+print(*result)
