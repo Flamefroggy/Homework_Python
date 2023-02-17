@@ -19,8 +19,6 @@ def find_abv(update, context):
     except:
         context.bot.send_message(update.effective_chat.id, '')
 
-
-
 start_handler = CommandHandler('start', start)
 find_abv_handler = MessageHandler(Filters.text, find_abv )
 
